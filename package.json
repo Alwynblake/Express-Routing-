@@ -4,7 +4,12 @@
   "description": "lab8- creating the data models and writing a full test suite",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node list/index.js",
+    "lint": "eslint '**/*.js'",
+    "test": "node_modules/.bin/jest --coverage --verbose",
+    "test-watch": "node_modules/.bin/jest --watchAll --verbose --coverage",
+    "jsdoc": "node_modules/.bin/jsdoc -c ./docs/config/jsdoc.config.json",
+    "watch": "node_modules/.bin/jest --watchAll --coverage --verbose"
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,7 @@
     "express-swagger-generator": "^1.1.15",
     "jest": "^24.9.0",
     "superagent": "^5.1.0",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "uuid": "^3.3.3"
   }
 }
